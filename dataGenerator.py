@@ -33,7 +33,7 @@ class dataGenerator:
             idxs=np.random.choice(self.n_rel,size, replace=False)
             coef=self._get_coef(size)
             noise=0
-            if np.random.uniform(0, 1) > 0.5:
+            if np.random.uniform(0, 1) > 0.2:
                 noise=np.random.normal(0,1)
             corr[:,i]=np.dot(self.X[:,idxs], coef)+noise
         self.X=np.concatenate((self.X, corr), axis=1)
