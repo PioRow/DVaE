@@ -1,4 +1,4 @@
-import dataGenerator
+from feature_selection import dataGenerator
 import os
 def direct_build_20(n=1000):
     return (dataGenerator.dataGenerator(n)
