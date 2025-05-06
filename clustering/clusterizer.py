@@ -1,14 +1,14 @@
 import clustbench as cb
 import numpy as np
 import sklearn
-class Evaluator:
+class Clusterizer:
 
     @staticmethod
     def evaluate_model(b,model,model_name):
         if model_name=="DBSCAN":
-            return Evaluator._eval_db(b,model)
+            return Clusterizer._eval_db(b, model)
         else:
-            return Evaluator._eval(b,model)
+            return Clusterizer._eval(b, model)
 
     @staticmethod
     def _eval_db( b, model):
